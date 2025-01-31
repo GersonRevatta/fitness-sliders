@@ -8,6 +8,9 @@ This template should help get you started developing with Vue 3 in Vite.
 
 ## Customize configuration
 
+❯ node --version
+v22.13.0
+
 See [Vite Configuration Reference](https://vite.dev/config/).
 
 ## Project Setup
