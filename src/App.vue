@@ -3,47 +3,54 @@
     <div class="flex title mt-7 flex align-items-center justify-content-center">
       <h2 class="text-5xl">Transformación Fitness</h2>
     </div>
-    <div class="before-after-section flex align-items-center h-full justify-content-around p-8 pt-0 -mt-7">
+    <div class="before-after-section flex align-items-center h-full justify-content-around p-4 pt-0 mt-2">
       <!-- Imagen Antes -->
-      <div class="image-container flex flex-column align-items-center">
+      <!-- <div class="image-container flex flex-column align-items-center">
         <img :src="beforePhoto" alt="Antes" class="main-image" />
         <p class="image-label text-before text-red-300">Antes</p>
-      </div>
+      </div> -->
       <!-- Imagen Después -->
-      <div class="image-container flex flex-column align-items-center">
+      <!-- <div class="image-container flex flex-column align-items-center">
         <img :src="afterPhoto" alt="Después" class="main-image" />
         <p class="image-label text-after text-green-400">Después</p>
+      </div> -->
+      <!-- Slider -->
+      <div class="image-container flex flex-column align-items-center">
+        <ImageCarousel :products="parentPhotos" :numVisible="1" :numScroll="1" />
       </div>
     </div>
 
     <!-- Sección Productos -->
-    <div class="products-section title flex flex-column align-items-center -mt-7">
+    <div class="products-section title flex flex-column align-items-center mt-2">
       <h2 class="products-title text-3xl">Productos Consumidos</h2>
-      <TransformationCard
-        :beforePhoto="beforePhoto"
-        :afterPhoto="afterPhoto"
-        :products="products"
-      />
+      <!-- <TransformationCard :beforePhoto="beforePhoto" :afterPhoto="afterPhoto" :products="products" /> -->
+      <ImageCarousel :products="products" :numVisible="3" :numScroll="1" />
     </div>
   </div>
 </template>
 
 <script>
 import TransformationCard from "./components/TransformationCard.vue";
+import ImageCarousel from './components/ImageCarousel.vue';
 
 export default {
   components: {
     TransformationCard,
+    ImageCarousel
   },
   data() {
     return {
+      parentPhotos: [
+        { id: 1, name: "Antes", image: "https://picsum.photos/500/200?random=1" },
+        { id: 2, name: "Despues", image: "https://picsum.photos/500/200?random=2" }
+      ],
       beforePhoto: "https://picsum.photos/800/800?random=1",
       afterPhoto: "https://picsum.photos/800/800?random=2",
       products: [
-        { id: 1, name: "Keratina", brand: "Marca A", image: "https://picsum.photos/150/150?random=2" },
-        { id: 2, name: "Proteína", brand: "Marca B", image: "https://picsum.photos/150/150?random=3" },
-        { id: 3, name: "Creatina", brand: "Marca C", image: "https://picsum.photos/150/150?random=4" },
-        { id: 4, name: "Vitaminas", brand: "Marca D", image: "https://picsum.photos/150/150?random=5" },
+        { id: 1, name: "Keratina", brand: "Marca A", image: "https://picsum.photos/300/200?random=2" },
+        { id: 2, name: "Proteína", brand: "Marca B", image: "https://picsum.photos/300/200?random=3" },
+        { id: 3, name: "Creatina", brand: "Marca C", image: "https://picsum.photos/300/200?random=4" },
+        { id: 4, name: "Vitaminas", brand: "Marca D", image: "https://picsum.photos/300/200?random=5" },
       ],
     };
   },
