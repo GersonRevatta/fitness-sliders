@@ -1,9 +1,7 @@
 <script setup>
-import TheWelcome from '../components/TheWelcome.vue'
+import SlidersComponent from "@/components/SlidersComponent.vue";
 </script>
 
 <template>
-  <main>
-    <TheWelcome />
-  </main>
+  <SlidersComponent />
 </template>
