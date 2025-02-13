@@ -1,0 +1,29 @@
+@import 'primeflex/primeflex.css';
+@import "primeicons/primeicons.css";
+@import 'vue3-carousel/dist/carousel.css';
+
+.carousel__next, .carousel__prev {
+    color: #fff;
+    z-index: 1000;
+}
+
+.carousel__pagination-button {
+    height: 5px;
+    width: 5px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.carousel {
+    --vc-pgn-background-color: rgba(255, 255, 255, 0.7);
+    --vc-pgn-active-color: rgba(255, 255, 255, 1);
+    --vc-nav-background: rgba(255, 255, 255, 0.7);
+    --vc-nav-border-radius: 100%;
+
+    img {
+        border-radius: 8px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
