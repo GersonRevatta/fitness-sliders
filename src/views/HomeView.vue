@@ -1,22 +1,20 @@
 <template>
   <Carousel :value="scenarios" :key="mainCarouselKey" :numVisible="1" :numScroll="1">
     <template #item="{ data }">
-      <div class="card">
-        <Carousel :value="data.parentPhotos" :key="`scenario-${data.id}`" :numVisible="2" :numScroll="1"
-          :responsiveOptions="responsiveOptions" :autoplayInterval="2500">
-          <template #item="{ data: parentPhoto }">
-            <div class="m-2 p-3">
-              <h2 class="text-center">{{ parentPhoto.title }}</h2>
-              <div class="mb-3">
-                <div class="relative mx-auto flex justify-content-center">
-                  <Image :src="parentPhoto.image" alt="Image" preview />
-                </div>
+      <Carousel :value="data.parentPhotos" :key="`scenario-${data.id}`" :numVisible="2" :numScroll="1"
+        :responsiveOptions="responsiveOptions" :autoplayInterval="2500">
+        <template #item="{ data: parentPhoto }">
+          <div class="m-2 p-3">
+            <h2 class="text-center">{{ parentPhoto.title }}</h2>
+            <div class="mb-3">
+              <div class="relative mx-auto flex justify-content-center">
+                <Image :src="parentPhoto.image" alt="Image" preview />
               </div>
-              <div class="text-center mb-3 font-medium">{{ parentPhoto.details }}</div>
             </div>
-          </template>
-        </Carousel>
-      </div>
+            <div class="text-center mb-3 font-medium">{{ parentPhoto.details }}</div>
+          </div>
+        </template>
+      </Carousel>
       <div>
         <Products :elements="data.products" :key="`products-${data.id}`" :scenaryId="data.id" />
       </div>
@@ -28,6 +26,7 @@
 import Products from "@/components/Products.vue";
 import Carousel from 'primevue/carousel';
 import Image from 'primevue/image';
+import '../assets/carousel.css';
 
 import { ref, nextTick } from 'vue';
 

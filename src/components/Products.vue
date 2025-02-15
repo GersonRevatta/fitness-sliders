@@ -1,14 +1,7 @@
 <template>
   <div class="content-carousel-products">
-    <Carousel
-      v-if="elements && elements.length > 0"
-      :key="carouselKey"
-      :value="elements"
-      :numVisible="numVisible"
-      :numScroll="numScroll"
-      :responsiveOptions="responsiveOptions"
-      :autoplayInterval="2500"
-      >
+    <Carousel v-if="elements && elements.length > 0" :key="carouselKey" :value="elements" :numVisible="numVisible"
+      :numScroll="numScroll" :responsiveOptions="responsiveOptions" :autoplayInterval="2500">
       <template #item="slotProps">
         <div class="border-1 surface-border border-round m-2 p-3">
           <div class="mb-3">
@@ -37,6 +30,7 @@ import Carousel from "primevue/carousel";
 import Image from 'primevue/image';
 import Tag from "primevue/tag";
 import Button from "primevue/button";
+import '../assets/carousel.css';
 
 const props = defineProps({
   elements: Array,
@@ -61,9 +55,9 @@ const responsiveOptions = ref([
 ]);
 </script>
 <style>
-  .content-carousel-products {
-    background-color: blue;
-    width: 100%;
-    padding: 10px;
-  }
+.content-carousel-products {
+  background-color: blue;
+  width: 100%;
+  padding: 10px;
+}
 </style>
