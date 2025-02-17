@@ -28,12 +28,14 @@ import PrimeVue from "primevue/config";
 import Aura from "@primevue/themes/aura";
 import "primeicons/primeicons.css"; // Iconos
 import "primeflex/primeflex.css"; // Utilidades de diseño
+import ConfirmationService from "primevue/confirmationservice";
 
 import App from "./App.vue";
 import router from "./router";
 
 const app = createApp(App);
 
+app.use(ConfirmationService);
 app.use(createPinia());
 app.use(router);
 
