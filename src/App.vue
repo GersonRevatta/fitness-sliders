@@ -1,11 +1,11 @@
 <script setup>
 import '@/assets/main.css';
 import { RouterView } from "vue-router";
-import DynamicDialog from "primevue/dynamicdialog";
-import ConfirmDialog from "primevue/confirmdialog";
+import Navbar from "@/components/Navbar.vue";
+
 </script>
 
 <template>
-  <!-- <ConfirmDialog/> -->
+  <Navbar />
   <RouterView />
 </template>

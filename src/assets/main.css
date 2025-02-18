@@ -1,5 +1,14 @@
 :root {
     --border-radius: 0.5rem;
+    --p-tag-primary-background: rgba(2,93,147,1) !important;
+}
+
+body {
+    margin: 0;
+}
+
+h2, div, span, p {
+    color: #fff;
 }
 
 .p-carousel-item {
@@ -10,6 +19,77 @@
 .slide-img img {
     width: 100%;
 }
+
+.p-image {
+    img {
+        border-radius: 0.5rem;
+    }
+}
+
+.banner {
+    position: relative;
+    .p-image {
+        img {
+            border-radius: 0;
+        }
+        &::before {
+           content: "";
+           position: absolute;
+           top: 0;
+           left: 0;
+           width: 100%;
+           height: 100%;
+           background: rgba(0,0,0,0.5);
+           z-index: 100;
+        }
+    }
+    .p-button {
+        position: absolute;
+        z-index: 900;
+    }
+    .p-carousel-next-button {
+        right: 15px;
+    }
+    .p-carousel-prev-button {
+        left: 15px;
+    }
+    .p-carousel-indicator-list {
+        position: absolute;
+        width: 100%;
+        bottom: 15px;
+    }
+    .banner-text {
+        position: absolute;
+        z-index: 900;
+        bottom: 40%;
+        left: 20%;
+        width: 100%;
+        padding: 0 1rem;
+        h2 {
+            font-size: 4rem;
+            margin: 5px 0;
+            color: #fff;
+        }
+        h3 {
+            font-size: 2.5rem;
+            margin: 5px 0;
+            color: #fff;
+        }
+    }
+}
+
+.p-menubar.p-component {
+    position: absolute;
+    z-index: 1000;
+    width: 100%;
+    flex-direction: row;
+    border-radius: 0;
+    background-color: transparent !important;
+    border: none;
+    justify-content: end;
+}
+
+
 
 .p-dialog {
     width: 25rem;
@@ -22,4 +102,11 @@
 
 .p-dialog-content {
     padding-bottom: 40px !important;
+    span {
+        color: #000;
+    }
+}
+
+.bg-gradient-1 {
+    background: linear-gradient(135deg, rgba(227,82,110,1) 11%, rgba(72,24,101,1) 37%, rgba(2,93,147,1) 68%, rgba(134,244,238,1) 84%);
 }
