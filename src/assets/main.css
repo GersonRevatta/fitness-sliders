@@ -1,0 +1,25 @@
+:root {
+    --border-radius: 0.5rem;
+}
+
+.p-carousel-item {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.slide-img img {
+    width: 100%;
+}
+
+.p-dialog {
+    width: 25rem;
+    margin: auto;
+}
+
+.p-dialog-footer {
+    display: none !important;
+}
+
+.p-dialog-content {
+    padding-bottom: 40px !important;
+}
