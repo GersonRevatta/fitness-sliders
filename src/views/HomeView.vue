@@ -35,7 +35,7 @@ const responsiveOptions = ref([
       </div>
       <Carousel :value="scenarios" :key="mainCarouselKey" :numVisible="1" :numScroll="1">
         <template #item="{ data }">
-          <div class="flex flex-auto flex-column md:flex-row flex-wrap">
+          <div class="flex flex-auto flex-column md:flex-row flex-wrap before-after">
             <div v-for="parentPhoto in data.parentPhotos" :key="`scenario-${data.id}`" class="col md:col-6">
               <div class="p-2">
                 <h2 class="text-center">{{ parentPhoto.title }}</h2>

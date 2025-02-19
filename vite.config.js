@@ -11,7 +11,7 @@ export default defineConfig({
     vueDevTools(),
   ],
   server: {
-    allowedHosts: ["e947-2802-8012-715a-f101-2d67-7633-b233-2ce6.ngrok-free.app"],
+    allowedHosts: ["dc16-2802-8012-7194-2501-63df-22dd-bb8b-52c.ngrok-free.app"],
   },
   base: '/fitness-sliders/',
   resolve: {

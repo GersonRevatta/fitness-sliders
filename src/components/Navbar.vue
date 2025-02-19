@@ -8,30 +8,35 @@ const items = ref([
     icon: 'pi pi-home'
   },
   {
-    label: 'Projects',
+    label: 'Nosotros',
+    icon: 'pi pi-home'
+  },
+  {
+    label: 'Productos',
     icon: 'pi pi-search',
     badge: 3,
     items: [
       {
-        label: 'Core',
+        label: 'Adelgafruta',
         icon: 'pi pi-bolt',
-        shortcut: '⌘+S'
       },
       {
-        label: 'Blocks',
+        label: 'Bajazapan',
         icon: 'pi pi-server',
-        shortcut: '⌘+B'
       },
       {
         separator: true
       },
       {
-        label: 'UI Kit',
+        label: 'Ver más',
         icon: 'pi pi-pencil',
-        shortcut: '⌘+U'
       }
     ]
-  }
+  },
+  {
+    label: 'Contacto',
+    icon: 'pi pi-home'
+  },
 ]);
 </script>
 
