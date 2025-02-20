@@ -57,11 +57,11 @@ const closeDialog = () => {
 </script>
 
 <template>
-  <div class="">
+  <div class="carousel">
     <Carousel v-if="elements && elements.length > 0" :key="carouselKey" :value="elements" :numVisible="numVisible"
       :numScroll="numScroll" :responsiveOptions="responsiveOptions">
       <template #item="slotProps">
-        <div class="border-1 border-round m-2">
+        <div class="border-round m-2 bg-purple">
           <div class="relative mx-auto">
             <Image :src="slotProps.data.image" alt="Image" class="slide-img" />
             <Tag value="Stock" class="absolute" style="left:5px; top: 5px" />
