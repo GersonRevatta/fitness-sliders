@@ -2,9 +2,9 @@
 import Products from "@/components/Products.vue";
 import Carousel from 'primevue/carousel';
 import Image from 'primevue/image';
-import {Scenarios} from "@/data/scenarios";
+import { Scenarios } from "@/data/scenarios";
 import Banner from "@/components/Banner.vue";
-import {ref, nextTick} from 'vue';
+import { ref, nextTick } from 'vue';
 
 
 const mainCarouselKey = ref(0);
@@ -41,19 +41,21 @@ const responsiveOptions = ref([
                 <h2 class="text-center">{{ parentPhoto.title }}</h2>
                 <div class="mb-3">
                   <div class="relative mx-auto flex justify-content-center">
-                    <Image :src="parentPhoto.image" alt="Image" class="w-100" preview/>
+                    <Image :src="parentPhoto.image" alt="Image" class="w-100" preview />
                   </div>
                 </div>
                 <div class="text-center mb-3 font-medium">{{ parentPhoto.details }}</div>
               </div>
             </div>
           </div>
+          <div class="text-center">
+            <h3 class="text-3xl">Gracias a estos productos:</h3>
+          </div>
           <div>
-            <Products :elements="data.products" :key="`products-${data.id}`" :scenaryId="data.id"/>
+            <Products :elements="data.products" :key="`products-${data.id}`" :scenaryId="data.id" />
           </div>
         </template>
       </Carousel>
     </div>
   </div>
 </template>
-
