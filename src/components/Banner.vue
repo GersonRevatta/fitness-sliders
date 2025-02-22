@@ -14,7 +14,7 @@ const banners = ref(Banners);
         <div class="relative mx-auto">
           <Image :src="slotProps.data.src" alt="Image" class="slide-img" />
           <div class="banner-text">
-            <h2>Podés ser más</h2>
+            <h2>Puedes ser más</h2>
             <h3>Mucho más!</h3>
           </div>
         </div>
