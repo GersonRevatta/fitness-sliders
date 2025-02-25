@@ -9,7 +9,6 @@ import { ref, nextTick } from 'vue';
 
 const mainCarouselKey = ref(0);
 const carouselKey = ref(Date.now());
-
 const scenarios = ref(Scenarios);
 
 const responsiveOptions = ref([
